@@ -6,30 +6,8 @@ Vue.use(Router)
 
 export default new Router({
     routes: [{
-            path: '/',
-            name: 'home',
-            component: Home,
-            meta: {
-                visible: true
-            }
-        },
-        {
-            path: '/about',
-            name: 'about',
-            component: () =>
-                import ( /* webpackChunkName: "about" */ './views/About.vue'),
-            meta: {
-                visible: true,
-            },
-            children: [{
-                path: 'hello',
-                name: 'hello',
-                component: () =>
-                    import ( /* webpackChunkName: "about" */ './components/HelloWorld'),
-                meta: {
-                    visible: false,
-                },
-            }]
-        }
-    ]
+        path: '/',
+        name: 'home',
+        component: Home,
+    }]
 })
